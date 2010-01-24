@@ -1,0 +1,18 @@
+[user]
+  email = strzalekk@gmail.com
+  name = strzalek
+[color]
+  ui = always
+[core]
+  editor = mate -w
+[alias]
+  cm = commit -m
+  cma = commit -m
+  st = status
+  di = diff
+  dic = diff --cached
+  wc = whatchanged
+  pl = pull
+  plre = pull --rebase
+  ps = push
+  out = log origin..HEAD

@@ -1,0 +1,12 @@
+.DS_Store
+profile
+
+*.mode1v3
+*.pbxuser
+*.perspective 
+*.perspectivev3
+*.pyc 
+*~.nib/
+build/*
+
+*.tm_build_errors
