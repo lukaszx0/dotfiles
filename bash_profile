@@ -1,7 +1,8 @@
 source ~/.bash_aliases
 
-export PATH=/opt/local/bin:/opt/local/sbin:$HOME/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
 export MANPATH=/opt/local/share/man:$MANPATH
+export GEM_HOME=/usr/local/Cellar/gems/1.8
 
 export TERM=xterm-color
 export LANG=pl_PL.UTF-8
