@@ -1,6 +1,6 @@
 source ~/.bash_aliases
 
-export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
+export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin:/usr/local/pgsql/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 export GEM_HOME=/usr/local/Cellar/gems/1.8
 
@@ -36,13 +36,8 @@ parse_git_branch() {
 }
 
 prompt_func() {
-    previous_return_value=$?;
-    prompt="${COLOR_GREEN}\u@${COLOR_RED}\h ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
-    if [ $previous_return_value -eq 0 ];
-    then
-        PS1="${prompt}${COLOR_NONEP}➔ ${COLOR_NONE}"
-    else
-        PS1="${prompt}${COLOR_RED}➔ ${COLOR_NONE}"
-    fi
+  previous_return_value=$?;
+  prompt="${COLOR_GREEN}\u@${COLOR_RED}\h ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
+  PS1="${prompt}${COLOR_NONEP}➔ ${COLOR_NONE}"
 }
 PROMPT_COMMAND=prompt_func
