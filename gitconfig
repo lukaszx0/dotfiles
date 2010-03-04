@@ -7,6 +7,7 @@
   editor = mate -w
 [alias]
   cm = commit -m
+  cma = commit --amend
   co = checkout
   cma = commit -m
   st = status
