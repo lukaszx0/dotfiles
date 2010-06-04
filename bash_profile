@@ -1,8 +1,10 @@
 source ~/.bash_aliases
-
-export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin:/usr/local/pgsql/bin
-export MANPATH=/opt/local/share/man:$MANPATH
+if [[ -s /Users/strzalek/.rvm/scripts/rvm ]] ; then source /Users/strzalek/.rvm/scripts/rvm ; fi
+  
 export GEM_HOME=/usr/local/Cellar/gems/1.8
+export GEM_PATH=/usr/local/Cellar/gems/1.8
+
+export PATH=/usr/local/bin:$GEM_PATH/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 export TERM=xterm-color
 export LANG=pl_PL.UTF-8

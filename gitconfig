@@ -6,6 +6,8 @@
 [core]
   editor = mate -w
 [alias]
+  co = checkout
+  ci = commit
   cm = commit -m
   cma = commit --amend
   co = checkout
@@ -18,3 +20,9 @@
   plre = pull --rebase
   ps = push
   out = log origin..HEAD
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
