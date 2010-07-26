@@ -11,8 +11,7 @@
   cm = commit -m
   cma = commit --amend
   co = checkout
-  cma = commit -m
-  st = status
+  st = status -sb
   di = diff
   dic = diff --cached
   wc = whatchanged
@@ -20,9 +19,8 @@
   plre = pull --rebase
   ps = push
   out = log origin..HEAD
-[difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
   prompt = false
 [diff]
   tool = Kaleidoscope
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"

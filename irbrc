@@ -27,7 +27,7 @@ if rails_env = ENV['RAILS_ENV']
   IRB.conf[:IRB_RC] = Proc.new do
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     ActiveRecord::Base.instance_eval { alias :[] :find }
-  end
+  end  
 end
 
 Hirb::View.enable
