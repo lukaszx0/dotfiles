@@ -1,5 +1,5 @@
 source ~/.bash_aliases
-if [[ -s /Users/strzalek/.rvm/scripts/rvm ]] ; then source /Users/strzalek/.rvm/scripts/rvm ; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
 export MANPATH=/opt/local/share/man:$MANPATH
