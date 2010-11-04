@@ -12,8 +12,7 @@
   cma = commit --amend
   co = checkout
   st = status -sb
-  di = diff
-  dic = diff --cached
+  diffc = diff --cached
   wc = whatchanged
   pl = pull
   plre = pull --rebase
