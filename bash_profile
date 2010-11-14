@@ -64,3 +64,11 @@ quit () {
         osascript -e 'quit app "'$app'"'
     done
 }
+
+pg.start() {
+  pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start > /dev/null 2>&1 &
+}
+
+pg.stop() {
+  pg_ctl -D /usr/local/var/postgres stop -s -m fast
+}
