@@ -34,9 +34,16 @@ parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
 
+ruby_version() {
+  if [ -f ".rvmrc" ]
+  then
+    echo "#$(cat .rvmrc | sed "s/rvm //")"
+  fi
+}
+
 prompt_func() {
   previous_return_value=$?;
-  prompt="${COLOR_GREEN}\u@${COLOR_RED}\h ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
+  prompt="${COLOR_GREEN}\u@${COLOR_RED}\h${COLOR_GREEN}$(ruby_version) ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
   PS1="${prompt}${COLOR_NONEP}➔ ${COLOR_NONE}"
 }
 PROMPT_COMMAND=prompt_func
