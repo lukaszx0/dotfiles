@@ -1,12 +1,18 @@
 source ~/.bash_aliases
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 export TERM=xterm-color
 export LANG=pl_PL.UTF-8
 
 export EDITOR="mate -w"
+
+#Go lang
+export GOROOT=`brew --prefix go`
+export GOBIN=/usr/local/bin
+export GOARCH=amd64
+export GOOS=darwin
 
 NM="\[\033[0;38m\]"
 HI="\[\033[1;32m\]"
@@ -35,15 +41,12 @@ parse_git_branch() {
 }
 
 ruby_version() {
-  if [ -f ".rvmrc" ]
-  then
-    echo "#$(cat .rvmrc | sed "s/rvm //")"
-  fi
+  rvm-prompt i v p g
 }
 
 prompt_func() {
   previous_return_value=$?;
-  prompt="${COLOR_GREEN}\u@${COLOR_RED}\h${COLOR_GREEN}$(ruby_version) ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
+  prompt="${COLOR_GREEN}\u@${COLOR_RED}\h${COLOR_GREEN}#$(ruby_version) ${COLOR_BLUE}\w${COLOR_GREEN}$(parse_git_branch)${COLOR_YELLOW}$(git_dirty_flag)${COLOR_NONEP} "
   PS1="${prompt}${COLOR_NONEP}➔ ${COLOR_NONE}"
 }
 PROMPT_COMMAND=prompt_func
