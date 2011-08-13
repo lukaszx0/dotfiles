@@ -1,7 +1,11 @@
 source ~/.bash_aliases
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH:/usr/local/Cellar/gems/1.8/bin
+PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="/usr/local/bin:$PATH"
+test -d "$HOME/bin" &&
+PATH="$HOME/bin:$PATH"
+
 export MANPATH=/opt/local/share/man:$MANPATH
 export TERM=xterm-color
 export LANG=pl_PL.UTF-8
