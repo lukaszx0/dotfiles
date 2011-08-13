@@ -20,16 +20,16 @@
   out = log origin..HEAD
   l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color "diff"]
-  meta = blue bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+  meta = blue
+  frag = magenta
+  old = red
+  new = green
 [color "branch"]
-  current = yellow reverse
-  local = yellow bold
-  remote = green bold
+  current = green bold
+  local = blue
+  remote = yellow
   plain = red bold
 [color "status"]
   added = yellow
-  changed = green bold
-  untracked = blue bold
+  changed = green
+  untracked = blue
