@@ -1,2 +1,2 @@
 #!/bin/sh
-git status | grep deleted | awk '{print \$3}' | xargs git rm
+git ls-files -d | xargs git rm
