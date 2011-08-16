@@ -1,0 +1,2 @@
+#!/bin/sh
+git log --pretty=format:%aN | sort | uniq -c | sort -rn
