@@ -8,8 +8,7 @@
 [alias]
   co = checkout
   ci = commit
-  cm = commit -m
-  cma = commit --amend
+  cia = commit --amend
   co = checkout
   st = status -sb
   diffc = diff --cached
