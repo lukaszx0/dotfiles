@@ -9,6 +9,7 @@
   co = checkout
   ci = commit
   cia = commit --amend
+  ca = commit -am
   co = checkout
   st = status -sb
   diffc = diff --cached
