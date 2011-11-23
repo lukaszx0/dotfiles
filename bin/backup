@@ -11,7 +11,7 @@ IFS=$'\n'
 
 
 # Your sparsebundle.
-sparsebundle="/Volumes/MY PASSPORT/backup.sparsebundle"
+sparsebundle="/Volumes/La-Public/backup.sparsebundle"
 
 # Your destination. My sparsebundle mounts to "backup".
 backup_location="/Volumes/backup"
@@ -19,14 +19,15 @@ backup_location="/Volumes/backup"
 # Directories to backup. Recursive, implied home (~) location.
 directories=(
   Desktop
-  Documents
+  Documents/important
+  Documents/inbox
 )
 
 hdiutil attach -noverify $sparsebundle
 
 for directory in ${directories[@]}
   do
-    rsync -avh --progress --delete ~/$directory $backup_location
+    rsync -avh --stats --progress --delete ~/$directory $backup_location
 done
 
 hdiutil detach $backup_location
