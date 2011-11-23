@@ -1,0 +1,4 @@
+export POW_WORKERS=3
+export POW_TIMEOUT=600
+export PATH="/Users/strzalek/.rbenv/shims:/Users/strzalek/.rbenv/bin:$PATH"
+export NEWRELIC_DISPATCHER=pow
