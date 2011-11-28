@@ -72,6 +72,7 @@ set visualbell
 
 " Start without the toolbar
 set guioptions-=T
+set guifont=Monaco:h11
 
 " Default gui color scheme
 color ir_black
