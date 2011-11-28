@@ -106,6 +106,12 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+"Emulate TextMate's indending shortcuts
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
 " Use modeline overrides
 set modeline
 set modelines=10
