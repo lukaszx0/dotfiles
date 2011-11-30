@@ -13,13 +13,18 @@ let mapleader = ","
 inoremap jj <ESC>
 
 " Whitespace stuff
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set nosmarttab
 set list listchars=tab:\ \ ,trail:·
+set autoindent             " automatic indent new lines
+set smartindent            " be smart about it
+set nowrap                 " do not wrap lines
+set softtabstop=2          " yep, two
+set shiftwidth=2           " ..
+set tabstop=4
+set expandtab              " expand tabs to spaces
+set nosmarttab             " fuck tabs
+set formatoptions+=n       " support for numbered/bullet lists
+set textwidth=80           " wrap at 80 chars by default
+set virtualedit=block      " allow virtual edit in visual block ..
 
 " Searching
 set hlsearch
@@ -33,6 +38,19 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status bar
 set laststatus=2
+
+" Use modeline overrides
+set modeline
+set modelines=10
+
+" Default color scheme
+color molokai
+
+" Hide scrollbars
+set guioptions=aAce
+
+" Show (partial) command in the status line
+set showcmd
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
@@ -84,15 +102,17 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
-" Use modeline overrides
-set modeline
-set modelines=10
-
-" Default color scheme
-color molokai
-
-" Show (partial) command in the status line
-set showcmd
+" sane movement with wrap turned on
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
 
 if has("gui_running")
   " Automatically resize splits when resizing MacVim window
