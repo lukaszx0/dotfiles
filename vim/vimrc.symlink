@@ -117,7 +117,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color molokai
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
