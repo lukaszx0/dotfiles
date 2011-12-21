@@ -22,6 +22,9 @@ set formatoptions+=n
 set textwidth=80
 set virtualedit=block
 
+" provide some context when editing
+set scrolloff=3
+
 " Searching
 set hlsearch
 set incsearch
@@ -54,14 +57,8 @@ set backspace=indent,eol,start
 "Remapping
 let mapleader = ","
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-
 " Command-T configuration
 let g:CommandTMaxHeight=10
-
-" Mapping
-map <Leader>n :NERDTreeToggle<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -90,31 +87,6 @@ filetype plugin indent on
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-"Emulate TextMate's indending shortcuts
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
-" sane movement with wrap turned on
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
 
 if has("gui_running")
   " Automatically resize splits when resizing MacVim window
