@@ -1,40 +1,40 @@
 [user]
-  name = Łukasz Strzałkowski
-  email = lukasz.strzalkowski@gmail.com
+	name = Łukasz Strzałkowski
+	email = lukasz.strzalkowski@gmail.com
 [color]
-  ui = always
+	ui = always
 [core]
-  editor = mate -w
+	editor = mate -w
 [alias]
-  co = checkout
-  ci = commit
-  cia = commit --amend
-  ca = commit -am
-  co = checkout
-  st = status -sb
-  diffc = diff --cached
-  wc = whatchanged
-  pl = pull
-  plre = pull --rebase
-  ps = push
-  out = log origin..HEAD
-  l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  rmd = !git-rm-deleted
-  contributors = !git-contributors
-  merge = merge --ignore-spaces-at-eol --no-ff
+	co = checkout
+	ci = commit
+	cia = commit --amend
+	ca = commit -am
+	co = checkout
+	st = status -sb
+	diffc = diff --cached
+	wc = whatchanged
+	pl = pull
+	plre = pull --rebase
+	ps = push
+	out = log origin..HEAD
+	l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	rmd = !git-rm-deleted
+	contributors = !git-contributors
+	merge = merge --ignore-spaces-at-eol --no-ff
 [color "diff"]
-  meta = blue
-  frag = magenta
-  old = red
-  new = green
+	meta = blue
+	frag = magenta
+	old = red
+	new = green
 [color "branch"]
-  current = green bold
-  local = blue
-  remote = yellow
-  plain = red bold
+	current = green bold
+	local = blue
+	remote = yellow
+	plain = red bold
 [color "status"]
-  added = green
-  changed = yellow
-  untracked = blue
+	added = green
+	changed = yellow
+	untracked = blue
 [merge]
 	ff = false
