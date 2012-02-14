@@ -43,3 +43,5 @@
 	untracked = blue
 [merge]
 	ff = false
+[github]
+	user = strzalek
