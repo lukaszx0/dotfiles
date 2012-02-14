@@ -17,6 +17,7 @@
 	wc = whatchanged
 	pl = pull
 	plre = pull --rebase
+	rec = rebase --continue
 	ps = push
 	out = log origin..HEAD
 	deploy-diff = diff production..master
