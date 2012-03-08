@@ -17,6 +17,7 @@
 	wc = whatchanged
 	pl = pull
 	plre = pull --rebase
+	rea = rebase --abort
 	rec = rebase --continue
 	ps = push
 	out = log origin..HEAD
