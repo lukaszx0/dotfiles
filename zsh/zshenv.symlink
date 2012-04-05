@@ -1,1 +1,2 @@
+export PATH="$HOME/.rbenv/bin:$PATH"
 skip_global_compinit=1
