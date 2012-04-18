@@ -1,5 +1,5 @@
 function chpwd() {
     if [ -r $PWD/.env ]; then
-        source $PWD/.envrc
+        source $PWD/.env
     fi
 }
