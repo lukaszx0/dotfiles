@@ -11,7 +11,7 @@ git clone https://github.com/mathiasbynens/dotfiles.git ~/.dotfiles && cd ~/.dot
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```bash
-cd ~/.dotfiles && ./.osx
+cd ~ && ./.osx
 ```
 
 ### Homebrew
@@ -19,7 +19,7 @@ cd ~/.dotfiles && ./.osx
 Install basic [homebrew](https://github.com/mxcl/homebrew) packages
 
 ```bash
-cd ~/.dotfiles && ./.brew
+cd ~ && ./.brew
 ```
 
 ## Thanks to...
