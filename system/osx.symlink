@@ -1,6 +1,6 @@
 # Set computer name (as done via System Preferences → Sharing)
 scutil --set ComputerName "Macbook Air (Strzalek)"
-scutil --set HostName "Macbook Air (Strzalek)"
+scutil --set HostName "strzalek-mba"
 scutil --set LocalHostName "strzalek-mba"
 
 # Menu bar: show remaining battery time (on pre-10.8); hide percentage
