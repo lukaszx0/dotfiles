@@ -16,3 +16,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Flush DNS cache
 alias flushdns="dscacheutil -flushcache"
+
+# Simple HTTP Server
+alias httpserver="python -m SimpleHTTPServer"
