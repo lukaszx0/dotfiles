@@ -29,6 +29,7 @@
 	merge = merge --ignore-spaces-at-eol --no-ff
 	up = !git-up
 	reup = !git-up
+	wdiff = diff --color-words
 [color "diff"]
 	meta = blue
 	frag = magenta
