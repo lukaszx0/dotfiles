@@ -26,7 +26,6 @@
 	l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	rmd = !git-rm-deleted
 	contributors = !git-contributors
-	merge = merge --ignore-spaces-at-eol --no-ff
 	up = !git-up
 	reup = !git-up
 	wdiff = diff --color-words
@@ -44,8 +43,6 @@
 	added = green
 	changed = yellow
 	untracked = blue
-[merge]
-	ff = false
 [github]
 	user = strzalek
 [push]
