@@ -26,3 +26,13 @@ end
 
 # logging into console by default
 enable_logger
+
+IRB::Irb.class_eval do
+  def output_value
+    ap @context.last_value, {
+        multiline: true,
+        plain: false,
+        indent: 2
+      }
+  end
+end
