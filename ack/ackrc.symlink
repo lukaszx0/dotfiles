@@ -1,2 +1,2 @@
---type-add=ruby=.haml,.rake,.scss,.less
+--type-add=ruby=.haml,.rake,.scss,.less,.rabl
 --type-set=erb=.erb
