@@ -5,6 +5,7 @@
 	ui = always
 [core]
 	editor = mate -w
+	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
 	ci = commit
@@ -13,6 +14,7 @@
 	co = checkout
 	st = status -sb
 	stc = diff --cached --name-only
+	diff = diff --ignore-all-space
 	diffc = diff --cached
 	wc = whatchanged
 	pl = pull
@@ -29,6 +31,14 @@
 	up = !git-up
 	reup = !git-up
 	wdiff = diff --color-words
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 [color "diff"]
 	meta = blue
 	frag = magenta
