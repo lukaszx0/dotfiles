@@ -30,6 +30,7 @@
 	contributors = !git-contributors
 	up = !git-up
 	reup = !git-up
+	pr = !git-pr
 	wdiff = diff --color-words
 	switch = !legit switch \"$@\"
 	branches = !legit branches
