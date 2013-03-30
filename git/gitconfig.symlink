@@ -4,7 +4,7 @@
 [color]
 	ui = always
 [core]
-	editor = mate -w
+	editor = vim
 	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
