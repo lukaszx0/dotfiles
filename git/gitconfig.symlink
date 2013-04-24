@@ -9,7 +9,7 @@
 [alias]
 	co = checkout
 	ci = commit
-	cia = commit --amend
+	cia = commit --amend --no-edit
 	ca = commit -am
 	co = checkout
 	st = status -sb
