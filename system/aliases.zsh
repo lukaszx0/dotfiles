@@ -19,3 +19,6 @@ alias flushdns="dscacheutil -flushcache"
 
 # Simple HTTP Server
 alias httpserver="python -m SimpleHTTPServer"
+
+alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder "
+alias dontshowhiddenfiles="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
