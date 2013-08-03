@@ -21,5 +21,10 @@ compinit
 
 #turn off autocorrect
 unsetopt correct_all
+
+#Go stuff
+export GOPATH="$PROJECTS/goworkspace"
+export PATH="$PATH:$GOPATH/bin"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
