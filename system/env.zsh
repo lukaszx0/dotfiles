@@ -1,1 +1,1 @@
-export EDITOR="mate -w"
+export EDITOR="mate"
