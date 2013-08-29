@@ -1,5 +1,10 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
-skip_global_compinit=1
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH="$HOME/.dotfiles"
+
+# your project folder that we can `c [tab]` to
+export PROJECTS="~/projects"
 
 #Go stuff
 export GOPATH="$PROJECTS/goworkspace"
