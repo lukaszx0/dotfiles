@@ -41,6 +41,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+	fix = commit --amend --reuse-message HEAD
 [color "diff"]
 	meta = blue
 	frag = magenta
