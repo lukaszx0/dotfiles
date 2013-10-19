@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && rake
+git clone https://github.com/strzalek/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && rake
 ```
 
 ### OSX Defaults
