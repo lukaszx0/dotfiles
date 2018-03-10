@@ -1,4 +1,4 @@
-alias cfg="/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME"
+alias cfg="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 alias ls='ls -hBG'
 alias ll='ls -lhF'
