@@ -4,6 +4,7 @@ alias ls='ls -hBG'
 alias ll='ls -lhF'
 
 alias grep="grep --color"
+alias rg="rg --type-add 'proto:*.proto'"
 
 # Golang
 export GOPATH="$HOME/Development/go"
