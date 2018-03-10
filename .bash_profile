@@ -6,6 +6,9 @@ alias ll='ls -lhF'
 alias grep="grep --color"
 alias rg="rg --type-add 'proto:*.proto'"
 
+source $HOME/.myconfig/bash/git-prompt.sh
+export PS1="\\w \$(__git_ps1 '%s')\$ "
+
 # Golang
 export GOPATH="$HOME/Development/go"
 export PATH="$PATH:$GOPATH/bin"
