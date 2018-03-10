@@ -1,3 +1,0 @@
-#!/bin/sh
-# Kills process that runs on given port
-lsof -i :$1 | sed -n 2p | tr -s " " | cut -d " " -f 2 | xargs kill
