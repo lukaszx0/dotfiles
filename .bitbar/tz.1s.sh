@@ -4,14 +4,14 @@ WAW=$(TZ="Europe/Warsaw" date +"WAW %H:%M")
 SFO=$(TZ="America/Los_Angeles" date +"SFO %H:%M")
 
 TZ=$(date +%Z)
-if [ "$TZ" = "PST" ]; then
+if [ "$TZ" = "PST" ] || [ "$TZ" = "PDT" ]; then
   echo "$NYC / $WAW"
 else
   echo "$SFO / $NYC"
 fi
 
-UTC=$(TZ="UTC" date +"UTC %H:%M")
-echo "UTC: $UTC"
+UTC=$(TZ="UTC" date +"UTC: %H:%M")
+echo $UTC
 
 UNIX=$(date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s")
 echo "Unix: $UNIX"
