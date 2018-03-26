@@ -7,6 +7,8 @@ alias grep="grep --color"
 alias rg="rg --type-add 'proto:*.proto'"
 
 source $HOME/.myconfig/bash/git-prompt.sh
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\\w \$(__git_ps1 '%s')\$ "
 
 # Golang
