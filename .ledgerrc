@@ -1,0 +1,6 @@
+--exchange $
+--sort date
+--effective
+--real
+--price-db ~/Dropbox/Finance/prices.db
+--file ~/Dropbox/Finance/ledger.dat
