@@ -15,6 +15,9 @@ export PS1="\\w \$(__git_ps1 '%s')\$ "
 export GOPATH="$HOME/Development/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# Rbenv
+eval "$(rbenv init -)"
+
 # gcloud (assumes /usr/local/lib/google-cloud-sdk)
 if [ -f '/usr/local/lib/google-cloud-sdk/path.bash.inc' ]; then
   source '/usr/local/lib/google-cloud-sdk/path.bash.inc';
