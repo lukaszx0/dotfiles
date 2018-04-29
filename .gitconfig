@@ -14,31 +14,15 @@
 	ca = commit -am
 	co = checkout
 	st = status -sb
-	stc = diff --cached --name-only
 	diff = diff --ignore-all-space
 	diffc = diff --cached
-	wc = whatchanged
-	pl = pull
 	plre = pull --rebase
-	rea = rebase --abort
-	rec = rebase --continue
 	ps = push
-	out = log origin..HEAD
-	deploy-diff = diff production..master
-	deploy-log = diff production..master --oneline
-	l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	rmd = !git-rm-deleted
-	contributors = !git-contributors
-	wdiff = diff --color-words
 	switch = !legit switch \"$@\"
 	branches = !legit branches
-	sprout = !legit sprout \"$@\"
 	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
-	fix = commit --amend --reuse-message HEAD
 [color "diff"]
 	meta = blue
 	frag = magenta
