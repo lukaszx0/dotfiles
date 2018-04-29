@@ -18,6 +18,7 @@
 	diffc = diff --cached
 	plre = pull --rebase
 	ps = push
+	cp = cherry-pick
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	unpublish = !legit unpublish \"$@\"
