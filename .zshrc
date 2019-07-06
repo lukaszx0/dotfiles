@@ -56,3 +56,11 @@ fi
 
 # FZF
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse"
+
+# Hooks
+function chpwd() {
+  # Autoload .env files
+  if [ -r $PWD/.env ]; then
+    source $PWD/.env
+  fi
+}
