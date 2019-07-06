@@ -14,7 +14,8 @@
 	ca = commit -am
 	co = checkout
 	st = status -sb
-	diff = diff --ignore-all-space
+	diff = diff --ignore-all-space --word-diff
+	show = show --word-diff
 	diffc = diff --cached
 	plre = pull --rebase
 	ps = push
