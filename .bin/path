@@ -1,0 +1,14 @@
+#!/bin/bash
+# Lists directories in $PATH.
+#
+# Press [enter] on an entry to list the executables inside. Press [esc] to go
+# back to directory listing, [esc] twice to exit completely.
+
+path_files=$(echo $PATH | sed -e $'s/:/\\\n/g' | eval \
+  "fzf ${FZF_DEFAULT_OPTS} --header='[find:path]'")
+
+if [[ -d $path_files ]]; then
+  echo "$(rg --files $path_files | rev | cut -d"/" -f1 | rev)" | eval \
+    "fzf ${FZF_DEFAULT_OPTS} --header='[find:exe] => ${path_files}' >/dev/null"
+  path
+fi

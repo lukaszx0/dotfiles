@@ -11,6 +11,9 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\\w \$(__git_ps1 '%s')\$ "
 
+# Custom scripts
+export PATH="$HOME/.bin:$PATH"
+
 # Golang
 export GOPATH="$HOME/Development/go"
 export PATH="$PATH:$GOPATH/bin"
@@ -29,3 +32,6 @@ fi
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# FZF
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse"
