@@ -1,3 +1,4 @@
+# ZSH
 skip_global_compinit=true
 autoload -U compinit colors
 compinit
@@ -5,6 +6,15 @@ colors
 
 unsetopt correct_all
 
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+setopt SHARE_HISTORY # share history between sessions
+setopt INC_APPEND_HISTORY # incrementally append cmds to history before execution
+setopt EXTENDED_HISTORY # add timestamps to history
+setopt HIST_EXPIRE_DUPS_FIRST # clean up dups first when GCing history
+setopt HIST_REDUCE_BLANKS # clean up superfluous whitespace
 setopt PROMPT_SUBST # the prompt string is first subjected to parameter expansion, command substitution and arithmetic expansion.
 
 # Aliases
