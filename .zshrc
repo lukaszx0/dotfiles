@@ -55,7 +55,8 @@ if [ -f '/usr/local/lib/google-cloud-sdk/completion.bash.inc' ]; then
 fi
 
 # FZF
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse"
+export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Hooks
 function chpwd() {
