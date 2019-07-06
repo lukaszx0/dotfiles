@@ -26,3 +26,6 @@ fi
 if [ -f '/usr/local/lib/google-cloud-sdk/completion.bash.inc' ]; then
   source '/usr/local/lib/google-cloud-sdk/completion.bash.inc';
 fi
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
