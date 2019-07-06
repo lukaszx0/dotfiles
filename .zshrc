@@ -66,12 +66,12 @@ source ~/.bin/histdb
 __histdb_init
 
 # Hooks
-chpwd_functions=(chpwd_dotenv)
+chpwd_functions=(__dotenv_chpwd)
 preexec_functions=(__histdb_preexec)
 precmd_functions=(__histdb_precmd)
 
 # Autoload .env files
-function chpwd_dotenv() {
+function __dotenv_chpwd() {
   if [ -r $PWD/.env ]; then
     source $PWD/.env
   fi
