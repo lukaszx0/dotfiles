@@ -305,18 +305,10 @@ cursor:
 live_config_reload: true
 
 # Shell
-#
-# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
-# Entries in `shell.args` are passed unmodified as arguments to the shell.
-#
-# Default:
-#   - (macOS) /bin/bash --login
-#   - (Linux) user login shell
-#   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+ program: /bin/zsh
+ args:
+   - --login
 
 # Startup directory
 #
