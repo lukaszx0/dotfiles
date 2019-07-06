@@ -61,8 +61,14 @@ fi
 export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Histdb
+source ~/.bin/histdb
+__histdb_init
+
 # Hooks
 chpwd_functions=(chpwd_dotenv)
+preexec_functions=(__histdb_preexec)
+precmd_functions=(__histdb_precmd)
 
 # Autoload .env files
 function chpwd_dotenv() {

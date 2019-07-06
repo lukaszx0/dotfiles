@@ -1,0 +1,65 @@
+#!/bin/zsh
+# set -euo pipefail
+
+HISTDB_PATH="$HOME/.histdb.sqlite3"
+HISTDB_SESSION_UUID=$(uuidgen)
+
+__histdb_init() {
+  # Do nothing if file already exists
+  if [[ -f $HISTDB_PATH ]]; then
+    return
+  fi
+  __histdb_sql <<-EOF
+    CREATE TABLE commands (
+      command_id INTEGER PRIMARY KEY AUTOINCREMENT,
+      cmd_uuid STRING UNIQUE NOT NULL,
+      session_uuid STRING NOT NULL,
+      cmd TEXT NOT NULL,
+      pwd TEXT NOT NULL,
+      start_timestamp INTEGER NOT NULL,
+      end_timestamp INTEGER,
+      exit_code INTEGER
+    );
+EOF
+  echo "created"
+}
+
+__histdb_insert_cmd() {
+  HISTDB_LAST_CMD_UUID=$(uuidgen)
+  __histdb_sql <<-EOF
+  INSERT INTO commands
+    (session_uuid, cmd_uuid, cmd, pwd, start_timestamp)
+  VALUES
+    ('$HISTDB_SESSION_UUID', '$HISTDB_LAST_CMD_UUID', '$(__histdb_escape_str $1)', '$(pwd)', '$(date +%s)');
+EOF
+}
+
+__histdb_update_cmd() {
+  __histdb_sql <<-EOF
+  UPDATE commands SET
+    exit_code = $1, end_timestamp = $(date +%s)
+  WHERE
+    cmd_uuid = '$HISTDB_LAST_CMD_UUID';
+EOF
+}
+
+__histdb_sql() {
+  sqlite3 "$HISTDB_PATH" $1
+}
+
+__histdb_escape_str() {
+  echo $1 | sed -e "s/'/''/g"
+}
+
+# Hooks
+__histdb_preexec() {
+  __histdb_insert_cmd $1
+}
+
+__histdb_precmd() {
+  # Can't update if we don't have UUID of cmd
+  if [[ ! -v HISTDB_LAST_CMD_UUID ]]; then
+    return
+  fi
+  __histdb_update_cmd $?
+}
