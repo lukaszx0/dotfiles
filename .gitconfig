@@ -19,11 +19,6 @@
 	plre = pull --rebase
 	ps = push
 	cp = cherry-pick
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	unpublish = !legit unpublish \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
 [color "diff"]
 	meta = blue
 	frag = magenta
