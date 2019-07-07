@@ -27,11 +27,6 @@ alias ll='ls -lhF'
 alias grep="grep --color"
 alias rg="rg --type-add 'proto:*.proto'"
 
-# Load all functions
-for fn in ~/.zsh/functions/*; do
-  source $fn
-done
-
 # Path
 # - Custom scripts
 export PATH="$HOME/.bin:$PATH"
@@ -42,6 +37,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Prompt
+source ~/.zsh/functions/git-prompt
 export GIT_PS1_SHOWUPSTREAM="verbose"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -63,12 +59,14 @@ fi
 
 # FZF
 export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
+source ~/.zsh/functions/fzf
 
 # Homebrew
 # https://docs.brew.sh/Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
 # Histdb
+source ~/.zsh/functions/histdb
 __histdb_init
 
 # Hooks
@@ -83,5 +81,9 @@ function __dotenv_chpwd() {
   fi
 }
 
-# Source Z again, but now _after_ the hooks. Otherwise its hook will be overwritten.
-source .zsh/functions/z
+# Z (https://github.com/rupa/z)
+export _Z_NO_PROMPT_COMMAND=1
+source ~/.zsh/functions/z
+
+# Load all other functions
+source ~/.zsh/functions/g
