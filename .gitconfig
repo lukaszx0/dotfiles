@@ -19,6 +19,7 @@
 	diffc = diff --cached
 	plre = pull --rebase
 	ps = push
+	psf = push --force-with-lease
 	cp = cherry-pick
 [color "diff"]
 	meta = blue
