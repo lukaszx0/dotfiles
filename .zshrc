@@ -64,6 +64,10 @@ fi
 # FZF
 export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
 
+# Homebrew
+# https://docs.brew.sh/Analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 # Histdb
 __histdb_init
 
