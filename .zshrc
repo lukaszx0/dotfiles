@@ -27,6 +27,11 @@ alias ll='ls -lhF'
 alias grep="grep --color"
 alias rg="rg --type-add 'proto:*.proto'"
 
+# Load all functions
+for fn in ~/.zsh/functions/*; do
+  source $fn
+done
+
 # Path
 # - Custom scripts
 export PATH="$HOME/.bin:$PATH"
@@ -37,7 +42,6 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Prompt
-source $HOME/.myconfig/bash/git-prompt.sh
 export GIT_PS1_SHOWUPSTREAM="verbose"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -59,10 +63,8 @@ fi
 
 # FZF
 export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Histdb
-source ~/.bin/histdb
 __histdb_init
 
 # Hooks
@@ -76,3 +78,6 @@ function __dotenv_chpwd() {
     source $PWD/.env
   fi
 }
+
+# Source Z again, but now _after_ the hooks. Otherwise its hook will be overwritten.
+source .zsh/functions/z
