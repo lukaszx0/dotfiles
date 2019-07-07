@@ -1,0 +1,8 @@
+# `git` alias, runs `git status` if no arguments passed
+g() {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
