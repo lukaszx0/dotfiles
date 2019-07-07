@@ -21,7 +21,7 @@ setopt PROMPT_SUBST # the prompt string is first subjected to parameter expansio
 zstyle ':completion:*' completer _complete _correct _approximate
 
 # Aliases
-alias cfg="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias ls='ls -hBG'
 alias ll='ls -lhF'
 alias grep="grep --color"
