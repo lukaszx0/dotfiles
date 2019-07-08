@@ -89,3 +89,8 @@ source ~/.zsh/functions/z
 
 # Load all other functions
 source ~/.zsh/functions/g
+
+# Local customizations that we don't want to check in and version
+if [[ -a ~/.localrc ]]; then
+  source ~/.localrc
+fi
