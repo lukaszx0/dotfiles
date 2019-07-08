@@ -46,7 +46,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 PROMPT="%* %{$fg_bold[green]%}%~%{$fg_bold[blue]%}$(__git_ps1)%{$reset_color%} $ "
 
 # Rbenv
-eval "$(rbenv init -)"
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init -)"
+fi
 
 # gcloud (assumes /usr/local/lib/google-cloud-sdk)
 if [ -f '/usr/local/lib/google-cloud-sdk/path.bash.inc' ]; then
