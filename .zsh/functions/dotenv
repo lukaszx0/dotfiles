@@ -1,0 +1,8 @@
+#!/bin/zsh
+# Autoload .env files
+
+function __dotenv_chpwd() {
+  if [ -r $PWD/.env ]; then
+    source $PWD/.env
+  fi
+}

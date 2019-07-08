@@ -75,24 +75,18 @@ export HOMEBREW_NO_ANALYTICS=1
 source ~/.zsh/functions/histdb
 __histdb_init
 
-# Hooks
-chpwd_functions=(__dotenv_chpwd)
-preexec_functions=(__histdb_preexec)
-precmd_functions=(__histdb_precmd git_prompt_precmd)
-
-# Autoload .env files
-function __dotenv_chpwd() {
-  if [ -r $PWD/.env ]; then
-    source $PWD/.env
-  fi
-}
-
 # Z (https://github.com/rupa/z)
 export _Z_NO_PROMPT_COMMAND=1
 source ~/.zsh/functions/z
 
 # Load all other functions
-source ~/.zsh/functions/g
+source ~/.zsh/functions/g # git alias
+source ~/.zsh/functions/dotenv # dotenv hook
+
+# Hooks
+chpwd_functions=(__dotenv_chpwd)
+preexec_functions=(__histdb_preexec)
+precmd_functions=(__histdb_precmd git_prompt_precmd)
 
 # Local customizations that we don't want to check in and version
 if [[ -a ~/.localrc ]]; then
