@@ -43,7 +43,11 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
-PROMPT="%* %{$fg_bold[green]%}%~%{$fg_bold[blue]%}$(__git_ps1)%{$reset_color%} $ "
+PROMPT='%* %{$fg_bold[green]%}%~%{$fg_bold[blue]%}%{$reset_color%} $ '
+
+git_prompt_precmd() {
+  PROMPT='%* %{$fg_bold[green]%}%~%{$fg_bold[blue]%}$(__git_ps1)%{$reset_color%} $ '
+}
 
 # Rbenv
 if [ -x "$(command -v rbenv)" ]; then
@@ -74,7 +78,7 @@ __histdb_init
 # Hooks
 chpwd_functions=(__dotenv_chpwd)
 preexec_functions=(__histdb_preexec)
-precmd_functions=(__histdb_precmd)
+precmd_functions=(__histdb_precmd git_prompt_precmd)
 
 # Autoload .env files
 function __dotenv_chpwd() {
