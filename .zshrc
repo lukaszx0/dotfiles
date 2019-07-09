@@ -55,11 +55,11 @@ if [ -x "$(command -v rbenv)" ]; then
 fi
 
 # gcloud (assumes /usr/local/lib/google-cloud-sdk)
-if [ -f '/usr/local/lib/google-cloud-sdk/path.bash.inc' ]; then
+if [ -f '/usr/local/lib/google-cloud-sdk/path.zsh.inc' ]; then
   source '/usr/local/lib/google-cloud-sdk/path.zsh.inc';
 fi
 
-if [ -f '/usr/local/lib/google-cloud-sdk/completion.bash.inc' ]; then
+if [ -f '/usr/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then
   source '/usr/local/lib/google-cloud-sdk/completion.zsh.inc';
 fi
 
