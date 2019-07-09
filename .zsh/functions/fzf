@@ -273,7 +273,7 @@ bindkey '\ec' fzf-cd-widget
 
 # De-dump entires on the list
 fzf-history-dedup() {
-  ruby -rset -ne 'BEGIN{s=Set.new}; print if s.add?($_)'
+  ruby -rset -ane 'BEGIN{s=Set.new}; print if s.add?($F[1])'
 }
 
 # CTRL-R - Paste the selected command from history into the command line
