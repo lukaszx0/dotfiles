@@ -17,6 +17,8 @@ case $TZ in
     ;;
 esac
 
+echo "TZ: $TZ"
+
 UTC=$(TZ="UTC" date +"UTC: %H:%M")
 echo $UTC
 
