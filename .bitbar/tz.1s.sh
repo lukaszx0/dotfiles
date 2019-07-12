@@ -4,11 +4,18 @@ WAW=$(TZ="Europe/Warsaw" date +"WAW %H:%M")
 SFO=$(TZ="America/Los_Angeles" date +"SFO %H:%M")
 
 TZ=$(date +%Z)
-if [ "$TZ" = "PST" ] || [ "$TZ" = "PDT" ]; then
-  echo "$NYC / $WAW"
-else
-  echo "$SFO / $NYC"
-fi
+
+case $TZ in
+  PDT|PST)
+    echo "$NYC / $WAW"
+    ;;
+  EDT|EST)
+    echo "$SFO / $WAW"
+    ;;
+  *)
+    echo "$SFO / $NYC"
+    ;;
+esac
 
 UTC=$(TZ="UTC" date +"UTC: %H:%M")
 echo $UTC
