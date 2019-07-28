@@ -16,6 +16,13 @@ setopt INC_APPEND_HISTORY # incrementally append cmds to history before executio
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt HIST_EXPIRE_DUPS_FIRST # clean up dups first when GCing history
 setopt HIST_REDUCE_BLANKS # clean up superfluous whitespace
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
 setopt PROMPT_SUBST # the prompt string is first subjected to parameter expansion, command substitution and arithmetic expansion.
 
 zstyle ':completion:*' completer _complete _correct _approximate
