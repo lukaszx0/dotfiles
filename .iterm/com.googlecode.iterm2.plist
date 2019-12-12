@@ -299,7 +299,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>219 348 928 394 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1000 1384 1459 914 -1011 900 3440 1417 </string>
+	<string>-1000 1510 1270 783 -1011 900 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-997 1843 650 467 -1011 900 3440 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_94C22D8B-688A-455D-A7B5-6FB2114073D4</key>
@@ -696,9 +696,9 @@
 				<key>0xf702-0x220000</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>47</integer>
 					<key>Text</key>
-					<string>[1;2D</string>
+					<string>0</string>
 				</dict>
 				<key>0xf702-0x240000</key>
 				<dict>
@@ -721,12 +721,19 @@
 					<key>Text</key>
 					<string>b</string>
 				</dict>
+				<key>0xf702-0x2a0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>47</integer>
+					<key>Text</key>
+					<string>1</string>
+				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>48</integer>
 					<key>Text</key>
-					<string>[1;2C</string>
+					<string>1</string>
 				</dict>
 				<key>0xf703-0x240000</key>
 				<dict>
@@ -748,6 +755,13 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>f</string>
+				</dict>
+				<key>0xf703-0x2a0000</key>
+				<dict>
+					<key>Action</key>
+					<integer>48</integer>
+					<key>Text</key>
+					<string>1</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -1136,7 +1150,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1440, 900}}</string>
 		<key>topLeft</key>
-		<string>{325, 859}</string>
+		<string>{324, 860}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -1145,7 +1159,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>584161598.91504598</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>12</integer>
+	<integer>13</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
