@@ -43,6 +43,9 @@ export PATH="$PATH:$GOPATH/bin"
 # - Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# System
+ulimit -n 4096 # increase limit of open files
+
 # Prompt
 source ~/.zsh/functions/git-prompt
 export GIT_PS1_SHOWUPSTREAM="verbose"
