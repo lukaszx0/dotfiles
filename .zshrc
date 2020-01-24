@@ -79,8 +79,8 @@ source ~/.zsh/functions/fzf
 export HOMEBREW_NO_ANALYTICS=1
 
 # Histdb
-source ~/.zsh/functions/histdb
-__histdb_init
+# source ~/.zsh/functions/histdb
+#__histdb_init
 
 # Z (https://github.com/rupa/z)
 export _Z_NO_PROMPT_COMMAND=1
@@ -92,8 +92,7 @@ source ~/.zsh/functions/dotenv # dotenv hook
 
 # Hooks
 chpwd_functions=(__dotenv_chpwd)
-preexec_functions=(__histdb_preexec)
-precmd_functions=(__histdb_precmd git_prompt_precmd)
+precmd_functions=(git_prompt_precmd)
 
 # Local customizations that we don't want to check in and version
 if [[ -a ~/.localrc ]]; then
