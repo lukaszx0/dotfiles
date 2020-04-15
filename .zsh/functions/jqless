@@ -1,0 +1,5 @@
+# paginated `jq` with colors using `less`
+jqless() {
+    # -FX tell less exit if output content can be displayed on one screen
+    jq -C "$@" | less -FXR
+}

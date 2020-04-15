@@ -93,6 +93,10 @@ source ~/.zsh/functions/z
 source ~/.zsh/functions/g # git alias
 source ~/.zsh/functions/dotenv # dotenv hook
 
+# Enhance JQ
+source ~/.zsh/functions/jqless
+alias jq=jqless
+
 # Hooks
 chpwd_functions=(__dotenv_chpwd)
 precmd_functions=(git_prompt_precmd)
