@@ -1,0 +1,20 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": false,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 13,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Dracula",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "go.gopath": "/Users/lukasz/Development/go",
+    "go.lintOnSave": "file",
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
+}
