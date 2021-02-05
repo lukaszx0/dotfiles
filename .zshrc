@@ -42,6 +42,8 @@ export GOPATH="$HOME/Development/go"
 export PATH="$PATH:$GOPATH/bin"
 # - Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+# - GNU Sed (brew install gnu-sed)
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # System
 ulimit -n 4096 # increase limit of open files
