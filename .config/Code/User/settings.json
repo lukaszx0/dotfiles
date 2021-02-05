@@ -5,9 +5,13 @@
     "window.zoomLevel": 0,
     "editor.fontSize": 13,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Default Dark+",
     "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "update.showReleaseNotes": false,
+    "keyboard.touchbar.enabled": false,
     "go.gopath": "/Users/lukasz/Development/go",
     "go.lintOnSave": "file",
     "[go]": {
@@ -16,5 +20,7 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    }
+    },
+    "files.autoSave": "onFocusChange",
+    "workbench.startupEditor": "newUntitledFile",
 }
