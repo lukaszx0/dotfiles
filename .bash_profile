@@ -40,6 +40,7 @@ export PATH="$HOME/.bin:$PATH"
 
 # Golang
 export GOPATH="$HOME/Development/go"
+export CGO_CFLAGS_ALLOW="-Xpreprocessor"
 export PATH="$PATH:$GOPATH/bin"
 
 # Rbenv
