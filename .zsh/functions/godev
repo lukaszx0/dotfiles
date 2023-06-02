@@ -1,0 +1,3 @@
+godev() {
+    go -gcflags '-l' "$@" |& panicparse
+}

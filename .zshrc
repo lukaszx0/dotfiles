@@ -100,6 +100,7 @@ source ~/.zsh/functions/z
 # Load all other functions
 source ~/.zsh/functions/g # git alias
 source ~/.zsh/functions/dotenv # dotenv hook
+source ~/.zsh/functions/godev # go with dev flags
 
 # Enhance JQ
 source ~/.zsh/functions/jqless
