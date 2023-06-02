@@ -33,6 +33,7 @@ alias ls='ls -hBG'
 alias ll='ls -lhF'
 alias grep="grep --color"
 alias rg="rg --type-add 'proto:*.proto'"
+alias k="kubectl"
 
 # Path
 # - Custom scripts
