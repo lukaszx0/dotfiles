@@ -88,6 +88,7 @@ source ~/.zsh/functions/fzf
 # Homebrew
 # https://docs.brew.sh/Analytics
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Histdb
 # source ~/.zsh/functions/histdb
