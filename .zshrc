@@ -83,7 +83,7 @@ fi
 
 # FZF
 export FZF_DEFAULT_OPTS="--height 20% --layout=reverse"
-source ~/.zsh/functions/fzf
+source <(fzf --zsh)
 
 # Homebrew
 # https://docs.brew.sh/Analytics
