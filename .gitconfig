@@ -25,6 +25,7 @@
 	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 	recent = "!sh git-recent"
 	hs = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order
+	sl = "!sh git-stash-list"
 [color "diff"]
 	meta = blue
 	frag = magenta

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+git stash list | \
+    fzf \
+      --ansi \
+      --no-sort \
+      --reverse \
+      --print-query \
+      --height=80% \
+      --preview="echo {} | cut -d':' -f1 | xargs git stash show -p" \
+      --preview-window='right:70%' | \
+    cut -d: -f1 | \
+    xargs -r git stash apply
