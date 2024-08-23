@@ -102,9 +102,11 @@ source ~/.zsh/functions/z
 source ~/.zsh/functions/g # git alias
 source ~/.zsh/functions/dotenv # dotenv hook
 source ~/.zsh/functions/godev # go with dev flags
+source ~/.zsh/functions/grep1
 
 # Enhance JQ
 source ~/.zsh/functions/jqless
+alias _jq=jq
 alias jq=jqless
 
 # Hooks
