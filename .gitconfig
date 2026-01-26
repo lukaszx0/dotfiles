@@ -17,17 +17,14 @@
 	ca = commit -am
 	co = checkout
 	st = status -sb
-	diff = diff --ignore-all-space --word-diff
-	show = show --word-diff
+	s = show --ext-diff
 	diffc = diff --cached
 	plre = pull --rebase
 	ps = push
 	psf = push --force-with-lease
 	cp = cherry-pick
-	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
-	show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+	l = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order
 	recent = "!sh git-recent"
-	hs = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order
 	sl = "!sh git-stash-list"
 [color "diff"]
 	meta = blue
@@ -47,3 +44,18 @@
 	user = lukaszx0
 [push]
 	default = current
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[advice]
+	skippedCherryPicks = false
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3
