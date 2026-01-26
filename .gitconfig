@@ -7,6 +7,9 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 	logallrefupdates=true
+	fsmonitor = true
+	untrackedCache = true
+	pager = delta
 [alias]
 	co = checkout
 	ci = commit
