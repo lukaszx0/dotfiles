@@ -1,0 +1,17 @@
+term = xterm-ghostty
+shell-integration = zsh
+auto-update-channel = tip
+
+theme="Adventure"
+
+font-family = "JetBrains Mono"
+font-size = 16
+font-thicken = true
+font-feature = -calt, -liga, -dlig
+
+window-padding-x = 10
+window-padding-y = 10
+window-inherit-working-directory = true
+
+adjust-cell-width = 0
+
