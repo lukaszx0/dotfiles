@@ -26,6 +26,7 @@
 	l = log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order
 	recent = "!sh git-recent"
 	sl = "!sh git-stash-list"
+	sw = "!sh git-switch-main"
 [color "diff"]
 	meta = blue
 	frag = magenta
