@@ -1,0 +1,22 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Lukasz Strzalkowski"
+email = "lukasz.strzalkowski@gmail.com"
+
+[ui]
+diff-editor = ":builtin"
+merge-editor = "vscode"
+# if you just type `jj` and hit enter, it will run `jj log` 
+# instead of printing the help menu. Very handy.
+default-command = "log"
+
+[aliases]
+# `jj tug` instantly pulls the nearest bookmark up to your finished commit.
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+# `jj roots` will show you your entire history from the very beginning.
+roots = ["log", "-r", "::"]
+# `jj amend` instantly squashes your current working copy (@) into its parent (@-).
+amend = ["squash"]
+# `jj push-all` quickly pushes all your stacked PR bookmarks at once.
+push-all = ["git", "push", "--all"]
